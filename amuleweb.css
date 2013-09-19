@@ -1,0 +1,25 @@
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-size: 11px; font-family: Verdana, Tahoma; color: #000000; background-color: #ffffff; }
+
+.trigger { cursor: pointer; cursor: hand; font-family: Verdana, Tahoma ; font-size: 10px; }
+.branch { display: block; margin-left: 16px; font-family: Verdana, Tahoma ; font-size: 10px; }
+
+.isconnected { color: #ffffff; }
+
+.tab_top_left {  height: 24px; width: 24px; background-image: url(tab_top_left.png);  padding: 0px; white-space: nowrap; }
+.tab_top_middle { height: 24px; background-image: url(tab_top_middle.png);  padding: 0px; white-space: nowrap; }
+.tab_top_right { height: 24px; width: 24px;  background-image: url(tab_top_right.png);  padding: 0px; white-space: nowrap; }
+
+.tab_bottom_left { height: 24px; width: 24px; background-image: url(tab_bottom_left.png); padding: 0px; white-space: nowrap; }
+.tab_bottom_middle { height: 24px; background-image: url(tab_bottom_middle.png); padding: 0px; }
+.tab_bottom_right {  height: 24px; width: 24px; background-image: url(tab_bottom_right.png);  padding: 0px; white-space: nowrap; }
+
+.tab_right { width: 24px; background-image: url(tab_right.png); padding: 0px; white-space: nowrap; }
+.tab_left { width: 24px; background-image: url(tab_left.png); padding: 0px; white-space: nowrap; }
+
+.dotted_table { border-width: 1px; border-color: #000000; border-style: dotted; padding: 3px; white-space: nowrap; }
+
+#list_view:hover { background: #cccccc; }
+
+td { padding: 0px 3px 0px 3px; }
+
+.error { display: inline; color: red; }
