@@ -37,7 +37,7 @@
   <br>
   <table width="75%" border="0" align="center" cellspacing="0" cellpadding="0" >
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Shared Files ::</b>
+      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: shared files ::</b>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -51,7 +51,7 @@
       <td class="tab_top_middle">&nbsp;</td>
       <td class="tab_top_right">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td>
         <form name="mainform" action="amuleweb-shared.php" method="post">

@@ -24,7 +24,7 @@
   <br>
   <table border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Search Module ::</b>
+      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: search ::</b>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -38,28 +38,33 @@
       <td class="tab_top_middle">&nbsp;</td>
       <td class="tab_top_right">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tab_colour">
+      <td class="tab_left"></td>
+      <td>&nbsp;</td>
+      <td class="tab_right"></td>
+    </tr>
+    <tr class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td>
         <form name="mainform" action="amuleweb-search.php" method="post">
-          <table cellpadding="0" cellspacing="0" align="center" class="dotted_table">
+          <table cellpadding="0" cellspacing="0" align="center">
             <tr valign="middle">
               <td align="center">
                 <table cellpadding="5" cellspacing="5">
                   <tr>
                     <td colspan="3">
-                      <input name="searchval" id="searchval" type="text" size="70">
+                      <input name="searchval" id="searchval" type="text" class="form_text" size="70">
                     </td>
                     <td align="center">
-                      <input name="search" id="search" type="submit" value="Search" onClick="javascript:formCommandSubmit('search');">
+                      <input name="search" id="search" type="submit" class="form_button" value="search" onClick="javascript:formCommandSubmit('search');">
                       <input type="hidden" name="command" value="">
                     </td>
                   </tr>
                   <tr>
                     <td align="center">
                       <label>Min size :</label>
-                      <input name="minsize" id="minsize" type="text" size="5">
-                      <select name="minsizeu" id="minsizeu">
+                      <input name="minsize" id="minsize" type="text" class="form_text" size="5">
+                      <select name="minsizeu" id="minsizeu" class="form_text">
                         <option>Byte</option>
                         <option>KByte</option>
                         <option selected>MByte</option>
@@ -68,21 +73,21 @@
                     </td>
                     <td align="center">
                       <label>Availability >=</label>
-                      <input name="avail" id="avail" type="text" size="6">
+                      <input name="avail" id="avail" type="text" class="form_text" size="6">
                     </td>
                     <td align="center">
                       <label>File extension :</label>
-                      <input name="ext" id="ext" type="text" size="4">
+                      <input name="ext" id="ext" type="text" class="form_text" size="4">
                     </td>
                     <td align="center">
-                      <input name="reload" id="reload" type="button" value="Reload Search" onClick="self.location.href='amuleweb-search.php'">
+                      <input name="reload" id="reload" type="button" class="form_button" value="reload Search" onClick="self.location.href='amuleweb-search.php'">
                     </td>
                   </tr>
                   <tr>
                     <td align="center">
                       <label>Max size :</label>
-                      <input name="maxsize" id="maxsize" type="text" size="5">
-                      <select name="maxsizeu" id="maxsizeu">
+                      <input name="maxsize" id="maxsize" type="text" class="form_text" size="5">
+                      <select name="maxsizeu" id="maxsizeu" class="form_text">
                         <option>Byte</option>
                         <option>KByte</option>
                         <option selected>MByte</option>
@@ -91,7 +96,7 @@
                     </td>
                     <td align="center">
                       <label>Search type :</label>
-                      <select name="searchtype" id="searchtype">
+                      <select name="searchtype" id="searchtype" class="form_text">
                         <option value="2" selected>Kad</option>
                         <option value="1">Global</option>
                         <option value="0">Local</option>
@@ -99,7 +104,7 @@
                     </td>
                     <td align="center">
                       <label>File type :</label>
-                      <select name="filetype" id="filetype">
+                      <select name="filetype" id="filetype" class="form_text">
                         <option selected></option>
                         <option value="Arc">Archive</option>
                         <option value="Audio">Audio</option>
@@ -111,7 +116,7 @@
                       </select>
                     </td>
                     <td align="center">
-                      <input name="clear" id="clear_fields" type="reset" value="Clear Search" onClick="javascript:formCommandSubmit('clear');">
+                      <input name="clear" id="clear_fields" type="reset" class="form_button" value="clear search" onClick="javascript:formCommandSubmit('clear');">
                     </td>
                   </tr>
                 </table>
@@ -120,13 +125,13 @@
                 <table>
                   <tr>
                     <td>
-                      <input name="download" id="download" type="submit" value="Download" onClick="javascript:formCommandSubmit('download');">
+                      <input name="download" id="download" type="submit" class="form_button" value="download" onClick="javascript:formCommandSubmit('download');">
                     </td>
                     <td align="center">
                       <img src="arrow-r.png" width="42" height="23" alt="arrow-r">
                     </td>
                     <td>
-                      <select name="targetcat" id="targetcat">
+                      <select name="targetcat" id="targetcat" class="form_text">
                         <?php
                           $cats = amule_get_categories();
                           foreach($cats as $c)
@@ -141,7 +146,6 @@
               </td>
             </tr>
           </table>
-          <br>
           <table align="center" rules="rows" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td height="30" width="20">&nbsp;</td>

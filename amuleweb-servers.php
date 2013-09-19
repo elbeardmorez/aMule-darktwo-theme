@@ -16,7 +16,7 @@
   <br>
   <table border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Server List ::</b>
+      <td heigt="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: server list ::</b>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -30,29 +30,29 @@
       <td colspan="2" class="tab_top_middle">&nbsp;</td>
       <td class="tab_top_right">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td>
         <form action="amuleweb-servers.php" method="GET">
-          <table border="0" cellpadding="4" cellspacing="0" class="dotted_table">
+          <table border="0" cellpadding="4" cellspacing="0">
             <tr>
-              <td  colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>Add new ed2k server</b></td>
+              <td  colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>add new ed2k server</b></td>
             </tr>
             <tr>
               <td height="30" valign="middle" align="left">Name: </td>
-              <td height="30" align="left"><input name="name" type="text" size="50"></td>
+              <td height="30" align="left"><input name="name" type="text" class="form_text" size="50"></td>
             </tr>
             <tr>
               <td height="30" valign="middle" align="left">IP address: </td>
-              <td height="30" align="left"><input name="ip" type="text" size="15" maxlength="15"> : <input name="port" type="text" size="5" maxlength="5"></td>
+              <td height="30" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
             </tr>
             <tr>
               <td height="30" colspan="2" valign="middle" align="right">
                 <?php
                   if ($_SESSION["guest_login"] == 0)
                   {
-                    echo '<input type="submit" value="Add to list" onclick="refresh()">&nbsp;';
-                    echo '<input type="submit" value="Refresh list" onclick="refresh()">';
+                    echo '<input type="submit" class="form_button" value="add to list" onclick="refresh()">&nbsp;';
+                    echo '<input type="submit" class="form_button" value="refresh list" onclick="refresh()">';
                     echo '<input name="cmd" type="hidden" value="add">';
                   }
                 ?>
@@ -63,21 +63,21 @@
       </td>
       <td align="right">
         <form action="amuleweb-servers.php" method="GET">
-          <table border="0" cellpadding="4" cellspacing="0" class="dotted_table">
+          <table border="0" cellpadding="4" cellspacing="0">
             <tr>
-              <td colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>Bootstrap Kad from node</b></td>
+              <td colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>bootstrap Kad from node</b></td>
             </tr>
             <tr><td height="30" colspan="2">&nbsp;</td></tr>
             <tr>
               <td height="30" valign="middle" align="left">IP address: </td>
-              <td height="30" align="left"><input name="ip" type="text" size="15" maxlength="15"> : <input name="port" type="text" size="5" maxlength="5"></td>
+              <td height="30" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
             </tr>
             <tr>
               <td height="30" colspan="2" valign="middle" align="right">
                 <?php
                   if ($_SESSION["guest_login"] == 0)
                   {
-                    echo '<input type="submit" value="Bootstrap"><input name="cmd" type="hidden" value="bootstrap">';
+                    echo '<input type="submit" class="form_button" value="bootstrap"><input name="cmd" type="hidden" value="bootstrap">';
                   }
                 ?>
               </td>
@@ -87,12 +87,12 @@
       </td>
       <td class="tab_right">&nbsp;</td>
     </tr>
-    <tr height="10px">
+    <tr height="10px" class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td colspan="2" align="center">&nbsp;</td>
       <td class="tab_right">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td colspan="2" align="center">
         <table border="0" cellpadding="0" cellspacing="0" rules="rows">

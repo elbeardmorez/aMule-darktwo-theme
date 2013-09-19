@@ -1,7 +1,6 @@
-body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-size: 11px; font-family: Verdana, Tahoma; color: #000000; background-color: #ffffff; }
-
-.trigger { cursor: pointer; cursor: hand; font-family: Verdana, Tahoma ; font-size: 10px; }
-.branch { display: block; margin-left: 16px; font-family: Verdana, Tahoma ; font-size: 10px; }
+html, body { height: 100%; margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-size: 11px; font-family: "Liberation Sans", "Bitstream Vera Sans", "Verdana", "Tahoma"; color: #ffffff; background-color: #000000; }
+.trigger { cursor: pointer; font-family: "Liberation Sans", "Bitstream Vera Sans", "Verdana", "Tahoma"; font-size: 10px; }
+.branch { display: block; margin-left: 16px; font-family: "Liberation Sans", "Bitstream Vera Sans", "Verdana", "Tahoma" ; font-size: 10px; }
 
 .isconnected { color: #ffffff; }
 
@@ -16,10 +15,10 @@ body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
 .tab_right { width: 24px; background-image: url(tab_right.png); padding: 0px; white-space: nowrap; }
 .tab_left { width: 24px; background-image: url(tab_left.png); padding: 0px; white-space: nowrap; }
 
-.dotted_table { border-width: 1px; border-color: #000000; border-style: dotted; padding: 3px; white-space: nowrap; }
-
-#list_view:hover { background: #cccccc; }
+.tab_full { height:100%; width:100%; vertical-align:middle; }
+.tab_colour { color: #ffffff; background-color: #474747; }
 
 td { padding: 0px 3px 0px 3px; }
-
+.form_button { font-size: 0.8em; background-color: #cccccc; color: black; }
+.form_text { font-size: 0.8em; background-color: #ffffff; color: black; }
 .error { display: inline; color: red; }

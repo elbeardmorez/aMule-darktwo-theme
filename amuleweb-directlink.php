@@ -4,7 +4,7 @@
   <head>
     <title>aMule Direct Link</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <link rel="stylesheet" type="text/css" href="amuleweb.css" />
+    <link rel="stylesheet" type="text/css" href="amuleweb.css">
     <script language="JavaScript" type="text/JavaScript">
       function refresh()
       {
@@ -13,15 +13,14 @@
     </script>
   </head>
   <body background="main_topbar.png">
-  <br>
   <form name="formlink" method="get" action="amuleweb-directlink.php">
-    <table width="" border="0" cellpadding="0" cellspacing="0" align="center">
+    <table width="" height=85 border="0" cellpadding="0" cellspacing="0" align="right">
       <tr valign="middle">
-        <td width="130" align="center"><input type="submit" name="Submit" value="Download link" onclick="refresh()"></td>
-        <td width="520" align="center"><input name="ed2klink" type="text" id="ed2klink" size="80"></td>
-        <td width="50" align="center">
-              <select name="selectcat" id="selectcat">
-                <?php
+        <td width="120" align="right"><input type="submit" class="form_button" name="Submit" value="download link" onclick="refresh()"></td>
+        <td align="center"><input name="ed2klink" type="text" class="form_text" id="ed2klink" size="60"></td>
+        <td width="50" align="left">
+          <select name="selectcat" id="selectcat" class="form_text">
+            <?php
               $cats = amule_get_categories();
               if ( $HTTP_GET_VARS["Submit"] != "" )
               {
@@ -42,8 +41,8 @@
               {
                 echo  '<option>', $c, '</option>';
               }
-                ?>
-              </select>
+            ?>
+          </select>
         </td>
       </tr>
     </table>

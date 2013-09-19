@@ -31,7 +31,7 @@
     </script>
   </head>
 
-  <body onLoad="showBranch('br_Stats');swapFolder('fl_Stats')">
+  <body onLoad="showBranch('br_Stats');swapFolder('fl_Stats')" class="tab_colour">
     <?php
 
     function print_ident($i)

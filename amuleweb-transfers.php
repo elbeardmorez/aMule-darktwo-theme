@@ -101,14 +101,14 @@
               if ( $_SESSION["filter_status"] == '') $_SESSION["filter_status"] = 'all';
               if ( $_SESSION["filter_cat"] == '') $_SESSION["filter_cat"] = 'all';
 
-              echo '<select name="status">';
+              echo '<select name="status" class="form_text">';
               foreach ($all_status as $s)
               {
                 echo (($s == $_SESSION["filter_status"]) ? '<option selected>' : '<option>'), $s, '</option>';
               }
               echo '</select>';
 
-              echo '<select name="category" id="category">';
+              echo '<select name="category" id="category" class="form_text">';
               $cats = amule_get_categories();
               foreach($cats as $c)
               {
@@ -135,7 +135,7 @@
       <br>
       <table width="95%" border="0" align="center" cellspacing="0" cellpadding="0">
         <tr>
-          <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Download
+          <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: download
           <?php
              $downloads = amule_load_vars("downloads");
              echo '&nbsp;(', count($downloads), ')';
@@ -146,10 +146,10 @@
           <td class="tab_top_middle">&nbsp;</td>
           <td class="tab_top_right">&nbsp;</td>
         </tr>
-        <tr>
+        <tr class="tab_colour">
           <td class="tab_left">&nbsp;</td>
           <td>
-            <table border="0" cellpadding="0" cellspacing="0" align="center" rules="rows" width="100%">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" rules="rows" width="100%" color="ffffff">
               <tr>
                 <td height="30"><input type="checkbox" value="on" name="allbox" onclick="checkAll();"/></td>
                 <td height="30" nowrap align="left"><a href="amuleweb-transfers.php?sort_download=filename" target="mainFrame">Filename</a></td>
@@ -328,7 +328,7 @@
 
                   if ($filter_status_result and $filter_cat_result)
                   {
-                    echo '<tr id="list_view">';
+                    echo '<tr class="tab_colour" id="list_view">';
                     echo '<td height="30"><input type="checkbox" name="', $file->hash, '"></td>';
                     echo '<td height="30" nowrap>', $file->short_name, '</td>';
                     echo '<td height="30" align="center">', $file->progress, '</td>';
@@ -367,7 +367,7 @@
     <br>
     <table width="95%" border="0" align="center" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Upload
+        <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: upload
         <?php
            $uploads = amule_load_vars("uploads");
            echo '&nbsp;(', count($uploads), ')';
@@ -378,7 +378,7 @@
         <td class="tab_top_middle">&nbsp;</td>
         <td class="tab_top_right">&nbsp;</td>
       </tr>
-      <tr>
+      <tr class="tab_colour">
         <td class="tab_left">&nbsp;</td>
         <td>
           <table border="0" align="center" cellpadding="0" cellspacing="0" rules="rows" width="100%">

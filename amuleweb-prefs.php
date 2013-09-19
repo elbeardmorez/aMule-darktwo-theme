@@ -118,7 +118,7 @@
   <br>
   <table border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: Preferences ::</b>
+      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: preferences ::</b>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -132,20 +132,20 @@
       <td class="tab_top_middle">&nbsp;</td>
       <td class="tab_top_right">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tab_colour">
       <td class="tab_left">&nbsp;</td>
       <td>
         <form name="mainform" action="amuleweb-prefs.php" method="post">
           <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="3"><b>Webserver</b></td>
+                    <td colspan="3"><b>webserver</b></td>
                   </tr>
                   <tr>
                     <td width="40%">Page refresh interval</td>
-                    <td width="10%"><input name="autorefresh_time" type="text" id="autorefresh_time" size="4"></td>
+                    <td width="10%"><input name="autorefresh_time" type="text" class="form_text" id="autorefresh_time" size="4"></td>
                     <td width="50%">&nbsp;</td>
                   </tr>
                   <tr>
@@ -157,15 +157,15 @@
             <tr><td>&nbsp;</td></tr>
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="4"><b>Line capacity (for statistics only)</b></td>
+                    <td colspan="4"><b>line capacity (for statistics only)</b></td>
                   </tr>
                   <tr>
                     <td width="40%">Max download rate</td>
-                    <td width="10%"><input name="max_line_down_cap" type="text" id="max_line_down_cap" size="4"></td>
+                    <td width="10%"><input name="max_line_down_cap" type="text" class="form_text" id="max_line_down_cap" size="4"></td>
                     <td width="40%">Max upload rate</td>
-                    <td width="10%"><input name="max_line_up_cap" type="text" id="max_line_up_cap" size="4"></td>
+                    <td width="10%"><input name="max_line_up_cap" type="text" class="form_text" id="max_line_up_cap" size="4"></td>
                   </tr>
                 </table>
               </td>
@@ -173,20 +173,20 @@
             <tr><td>&nbsp;</td></tr>
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="4"><b>Bandwidth limits</b></td>
+                    <td colspan="4"><b>bandwidth limits</b></td>
                   </tr>
                   <tr>
                     <td width="40%">Max download rate</td>
-                    <td width="10%"><input name="max_down_limit" type="text" id="max_down_limit" size="4"></td>
+                    <td width="10%"><input name="max_down_limit" type="text" class="form_text" id="max_down_limit" size="4"></td>
                     <td width="40%">Max upload rate</td>
-                    <td width="10%"><input name="max_up_limit" type="text" id="max_up_limit" size="4"></td>
+                    <td width="10%"><input name="max_up_limit" type="text" class="form_text" id="max_up_limit" size="4"></td>
                   </tr>
                   <tr>
                     <td width="50%" colspan="2">&nbsp;</td>
                     <td width="40%">Slot allocation</td>
-                    <td width="10%"><input name="slot_alloc" type="text" id="slot_alloc" size="4"></td>
+                    <td width="10%"><input name="slot_alloc" type="text" class="form_text" id="slot_alloc" size="4"></td>
                   </tr>
                 </table>
               </td>
@@ -194,15 +194,15 @@
             <tr><td>&nbsp;</td></tr>
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="4"><b>Connection settings</b></td>
+                    <td colspan="4"><b>connection settings</b></td>
                   </tr>
                   <tr>
                     <td width="40%">Max total connections (total)</td>
-                    <td width="10%"><input name="max_conn_total" type="text" id="max_conn_total" size="4"></td>
+                    <td width="10%"><input name="max_conn_total" type="text" class="form_text" id="max_conn_total" size="4"></td>
                     <td width="40%">Max sources per file</td>
-                    <td width="10%"><input name="max_file_src" type="text" id="max_file_src" size="4"></td>
+                    <td width="10%"><input name="max_file_src" type="text" class="form_text" id="max_file_src" size="4"></td>
                   </tr>
                   <tr>
                     <td colspan="4"><input name="autoconn_en" type="checkbox" id="autoconn_en">Autoconnect at startup</td>
@@ -216,18 +216,18 @@
             <tr><td>&nbsp;</td></tr>
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="4"><b>Network settings</b></td>
+                    <td colspan="4"><b>network settings</b></td>
                   </tr>
                   <tr>
                     <td width="40%">TCP port</td>
-                    <td width="10%"><input name="tcp_port" type="text" id="tcp_port" size="4"></td>
+                    <td width="10%"><input name="tcp_port" type="text" class="form_text" id="tcp_port" size="5"></td>
                     <td width="40%">UDP port</td>
-                    <td width="10%"><input name="udp_port" type="text" id="udp_port" size="4"></td>
+                    <td width="10%"><input name="udp_port" type="text" class="form_text" id="udp_port" size="5"></td>
                   </tr>
                   <tr>
-                    <td colspan="4"><input name="udp_dis" type="checkbox" id="udp_dis">Disable UDP connections</td>
+                    <td colspan="4"><input name="udp_dis" type="checkbox" id="udp_dis">Disab:le UDP connections</td>
                   </tr>
                 </table>
               </td>
@@ -235,14 +235,14 @@
             <tr><td>&nbsp;</td></tr>
             <tr>
               <td>
-                <table width="100%" class="dotted_table">
+                <table width="100%">
                   <tr>
-                    <td colspan="3"><b>File settings</b></td>
+                    <td colspan="3"><b>file settings</b></td>
                   </tr>
                   <tr>
                     <td width="50%"><input name="check_free_space" type="checkbox" id="check_free_space">Check free space</td>
                     <td width="40%">Minimum free space (Mb)</td>
-                    <td width="10%"><input name="min_free_space" type="text" id="min_free_space" size="4"></td>
+                    <td width="10%"><input name="min_free_space" type="text" class="form_text" id="min_free_space" size="4"></td>
                   </tr>
                   <tr>
                     <td colspan="3"><input name="new_files_auto_dl_prio" type="checkbox" id="new_files_auto_dl_prio">Added download files have auto priority</td>
@@ -292,7 +292,7 @@
                 <?php
                   if ($_SESSION["guest_login"] == 0)
                   {
-                    echo '<input type="submit" name="Submit" value="Apply">';
+                    echo '<input type="submit" class="form_button" name="Submit" value="apply">';
                     echo '<input name="command" type="hidden" id="command">';
                   }
                 ?>

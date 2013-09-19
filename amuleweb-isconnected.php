@@ -12,12 +12,12 @@
     ?>
   </head>
   <body background="main_topbar.png">
-    <table width="100%" class="isconnected">
+    <table width="100%">
       <tr valign="middle">
         <td align="center" width="10">
           <img src="emule.png" height="30">
         </td>
-        <td nowrap height="53">
+        <td nowrap height="85" valign="middle">
           <?php
             function CastToXBytes($size)
             {
