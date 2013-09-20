@@ -1,0 +1,24 @@
+--- a/src/webserver/src/WebServer.cpp	2013-09-19 22:11:23.936547402 +0100
++++ b/src/webserver/src/WebServer.cpp	2013-09-18 13:02:00.334759387 +0100
+@@ -1834,6 +1804,7 @@
+ {
+ 	long httpOutLen;
+ 	char *httpOut = 0;
++	bool checkSession = true;
+ 
+ 	// Strip out any path-component to prevent information leakage.
+ 	wxString filename = wxFileName(Data.parsedURL.File()).GetFullName();
+@@ -1845,9 +1816,11 @@
+ 	}
+ 
+ 	CSession *session = CheckLoggedin(Data);
+-
+ 	session->m_vars["login_error"] = "";
+-	if ( !session->m_loggedin ) {
++	if ( session->m_loggedin || filename.EndsWith(wxT(".css")) )
++		checkSession = false; 
++
++	if ( checkSession ) {
+ 		filename = wxT("login.php");
+ 
+ 		wxString PwStr(Data.parsedURL.Param(wxT("pass")));

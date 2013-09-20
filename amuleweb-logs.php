@@ -2,13 +2,13 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule Logs Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>aMule logs</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
     <link rel="stylesheet" type="text/css" href="amuleweb.css" />
   </head>
   <body>
   <br>
-  <table width=95% border="0" align="center" cellspacing="0" cellpadding="0">
+  <table class="log">
     <tr>
       <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: client log ::</b>
         <?php
@@ -20,12 +20,12 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr valign="middle" class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr valign="middle" class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td height="35">
         <table height=100% cellpadding="5">
           <tr>
@@ -44,19 +44,19 @@
           </tr>
         </table>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr valign="middle" class="tab_colour">
-      <td class="tab_left"></td>
+    <tr valign="middle" class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td align="center">
         <iframe name="log_client" src="amuleweb-logs_client.php" width="100%" height="200" frameborder="0"></iframe>
       </td>
-      <td class="tab_right"></td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
     <br>
     <tr>
@@ -70,12 +70,12 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr valign="middle" class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr valign="middle" class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td height="35">
         <table height=100% cellpadding="5">
           <tr>
@@ -94,24 +94,24 @@
           </tr>
         </table>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td>&nbsp;</td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr valign="middle" class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr valign="middle" class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td align="center">
         <iframe name="log_server" src="amuleweb-logs_server.php" width="100%" height="200" frameborder="0"></iframe>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
   </table>
   </body>

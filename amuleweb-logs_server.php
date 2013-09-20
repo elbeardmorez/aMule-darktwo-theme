@@ -2,21 +2,21 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule Logs Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>aMule server logs</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
     <link rel="stylesheet" type="text/css" href="amuleweb.css" />
   </head>
-  <body class="tab_colour">
+  <body class="layoutcolours">
     <table border=0 width="100%" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td align="left">
           <font face="Lucida Console">
-          <?php
-          $strinfo = amule_get_serverinfo($HTTP_GET_VARS['rst']);
-          echo '<pre>';
-          echo $strinfo;
-          echo '</pre>';
-          ?>
+            <?php
+              $strinfo = amule_get_serverinfo($HTTP_GET_VARS['rst']);
+              echo '<pre>';
+              echo $strinfo;
+              echo '</pre>';
+           ?>
           </font>
         </td>
       </tr>

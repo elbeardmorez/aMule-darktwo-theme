@@ -2,8 +2,9 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule CVS - Web Control Panel</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>aMule web service control</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <link rel="stylesheet" type="text/css" href="amuleweb.css"/>
     <script language="JavaScript" type="text/javascript">
       function breakout_of_frame()
       {
@@ -21,56 +22,59 @@
         document.login.pass.focus();
       }
     </script>
-    <!--<link rel="stylesheet" type="text/css" href="amuleweb.css">-->
-    <style type="text/css">
-      html, body{height:100%;}
-      body{color:#ffffff; background-color: #000000; margin:0; padding:0; }
-      table{width:100%; vertical-align:middle; }
-    </style>
   </head>
 
-  <body onload="login_init();" alink="white" link="white" text="white" vlink="white">
-    <table style="height:100%">
-      <tr><td style="height:135px"></td></tr>
+  <body onload="login_init();">
+    <table class="tablelayout">
       <tr>
-        <td>
-          <table border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="height:260px" align="center">
-                <a href="http://www.amule.org/" target="_blank"><img src="phpamule.png"></a>
-              </td>
-            </tr>
-            <tr valign="bottom">
-              <td style="height:30px" align="center">
-                <font style="font-size: 10pt;" face="Verdana"><b>Web Control Panel</b><br></font>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td style="height:30px" align="center">
-                <font style="font-size: 10pt;" face="Verdana">Login</font>
-              </td>
-            </tr>
-            <tr>
-              <td style="height:105px" align="center">
-                <form action="" method="post" name="login">
-                  <font style="font-size: 10pt;" face="Verdana">&nbsp;<br>Enter your password here<br><br></font>
-                  <input name="pass" size="37" style="border: 1px none black;" value="" type="password"><br><br>
-                  <input value="login now" type="submit" style="background-color:#cccccc; color: black;">
-                </form>
-                <?php
-                  if ($_SESSION["login_error"] != "")
-                  {
-                    echo "<font color=#000000 size=+2>";
-                    echo $_SESSION["login_error"];
-                    echo "</font>";
-                  }
-                ?>
-              </td>
-            </tr>
-          </table>
+        <td style="height: 130px;">
         </td>
       </tr>
-      <tr><td style="height:50px"></td></tr>
+      <tr>
+        <td>
+          <div class="tablelayout" style="width: 100%; height: 100%; margin: auto; vertical-align: middle;">
+            <div style="width: 260px; margin: auto; vertical-align: bottom;">
+              <a href="http://www.amule.org/" target="_blank"><img src="phpamule.png"></a>
+              <table class="tablelayout">
+                <tr>
+                  <td style="height: 25px; text-align: center; vertical-align: middle;">
+                    <p style="font-size: 1.2em; font-weight: bold;">web service control</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="height: 20px; text-align: center; vertical-align: middle;">
+                    <p style="font-size: 1.2em;">enter your password here</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="height: 50px; text-align: center">
+                    <form action="" method="post" name="login">
+                      <input name="pass" size="35" style="border-width: 0px;" value="" type="password"><br><br>
+                      <input type="submit" class="form_button" value="login">
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="height: 20px; text-align: center;">
+                    <p id="login_error" class="error">
+                      <?php
+                        if ($_SESSION["login_error"] != "")
+                        {
+                          echo $_SESSION["login_error"];
+                        }
+                      ?>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 50px; text-align: right;">
+        </td>
+      </tr>
     </table>
   </body>
 </html>

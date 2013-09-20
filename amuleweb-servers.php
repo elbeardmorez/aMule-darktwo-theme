@@ -14,9 +14,9 @@
   </head>
   <body>
   <br>
-  <table border="0" align="center" cellspacing="0" cellpadding="0">
+  <table style="margin: auto;">
     <tr>
-      <td heigt="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: server list ::</b>
+      <td colspan="3"><p class="p-heading">:: server list ::</p>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -26,28 +26,28 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td colspan="2" class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td colspan="2" class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td>
         <form action="amuleweb-servers.php" method="GET">
           <table border="0" cellpadding="4" cellspacing="0">
             <tr>
-              <td  colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>add new ed2k server</b></td>
+              <td colspan="2" style="text-align: left; vertical-align: middle;"><img src="add_server.png" style="float: left; margin-right: 5px;" ><p style="font-weight: bold">add new ed2k server</p></td>
             </tr>
             <tr>
-              <td height="30" valign="middle" align="left">Name: </td>
-              <td height="30" align="left"><input name="name" type="text" class="form_text" size="50"></td>
+              <td height="15" valign="middle" align="left">name: </td>
+              <td height="15" align="left"><input name="name" type="text" class="form_text" size="50"></td>
             </tr>
             <tr>
-              <td height="30" valign="middle" align="left">IP address: </td>
-              <td height="30" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
+              <td height="15" valign="middle" align="left">ip address: </td>
+              <td height="15" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
             </tr>
             <tr>
-              <td height="30" colspan="2" valign="middle" align="right">
+              <td height="15" colspan="2" valign="middle" align="right">
                 <?php
                   if ($_SESSION["guest_login"] == 0)
                   {
@@ -63,17 +63,17 @@
       </td>
       <td align="right">
         <form action="amuleweb-servers.php" method="GET">
-          <table border="0" cellpadding="4" cellspacing="0">
+          <table>
             <tr>
-              <td colspan="2" align="left" valign="middle"><img src="add_server.png"> <b>bootstrap Kad from node</b></td>
+              <td colspan="2" style="text-align: left; vertical-align: middle;"><img src="add_server.png" style="float: left; margin-right: 5px;" ><p style="font-weight: bold;">bootstrap Kad from node</p></td>
             </tr>
-            <tr><td height="30" colspan="2">&nbsp;</td></tr>
+            <tr><td height="20" colspan="2">&nbsp;</td></tr>
             <tr>
-              <td height="30" valign="middle" align="left">IP address: </td>
-              <td height="30" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
+              <td height="20" valign="middle" align="left">ip address: </td>
+              <td height="20" align="left"><input name="ip" type="text" class="form_text" size="15" maxlength="15"> : <input name="port" type="text" class="form_text" size="5" maxlength="5"></td>
             </tr>
             <tr>
-              <td height="30" colspan="2" valign="middle" align="right">
+              <td height="20" colspan="2" valign="middle" align="right">
                 <?php
                   if ($_SESSION["guest_login"] == 0)
                   {
@@ -85,28 +85,28 @@
           </table>
         </form>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr height="10px" class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr height="10px" class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td colspan="2" align="center">&nbsp;</td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td colspan="2" align="center">
-        <table border="0" cellpadding="0" cellspacing="0" rules="rows">
+        <table class="tablelayout table-row-border">
           <tr>
-            <td height="30" align="left"><a href="amuleweb-servers.php?sort=name" target="mainFrame">Name</a></td>
-            <td height="30" align="left"><a href="amuleweb-servers.php?sort=desc" target="mainFrame">Description</a></td>
-            <td height="30" align="center">Address</td>
-            <td height="30" align="center"><a href="amuleweb-servers.php?sort=users" target="mainFrame">Users</a></td>
-            <td height="30" align="center"><a href="amuleweb-servers.php?sort=max_users" target="mainFrame">Max Users</a></td>
-            <td height="30" align="center"><a href="amuleweb-servers.php?sort=files" target="mainFrame">Files</a></td>
+            <td height="30" align="left"><a href="amuleweb-servers.php?sort=name" target="mainFrame">name</a></td>
+            <td height="30" align="left"><a href="amuleweb-servers.php?sort=desc" target="mainFrame">description</a></td>
+            <td height="30" align="center">address</td>
+            <td height="30" align="center"><a href="amuleweb-servers.php?sort=users" target="mainFrame">users</a></td>
+            <td height="30" align="center"><a href="amuleweb-servers.php?sort=max_users" target="mainFrame">max users</a></td>
+            <td height="30" align="center"><a href="amuleweb-servers.php?sort=files" target="mainFrame">files</a></td>
             <?php
               if ($_SESSION["guest_login"] == 0)
               {
-                echo '<td height="30" align="center"><b>Actions</b></td>';
+                echo '<td height="30" align="center"><b>actions</b></td>';
               }
             ?>
           </tr>
@@ -214,21 +214,21 @@
                 {
                   echo '<td  align="center" nowrap><acronym title="Disconnect from server">',
                     '<a href="amuleweb-servers.php?cmd=disconnect&amp;ip=', $srv->ip,'&amp;port=', $srv->port, '" target="mainFrame">',
-                    '<img src="l_disconnect.png" border="0" alt="cancel">','</a></acronym>',
+                    '<img src="l_disconnect.png" alt="cancel" style="width: 15px">','</a></acronym>',
                     '<acronym title="Remove server from list">',
                     "<a href=\"amuleweb-servers.php?cmd=remove&amp;ip=", $srv->ip,"&amp;port=", $srv->port, "\" target=\"mainFrame\"
                     onclick=\"return confirm('Are you sure to remove this server from list?');\">",
-                    '<img src="l_remove.png" border="0" alt="cancel">','</a></acronym>',
+                    '<img src="l_remove.png" alt="cancel" style="width: 15px">','</a></acronym>',
                     '</td>';
                 } else
                 {
                   echo '<td  align="center" nowrap><acronym title="Connect to server">',
                     '<a href="amuleweb-servers.php?cmd=connect&amp;ip=', $srv->ip,'&amp;port=', $srv->port, '" target="mainFrame" >',
-                    '<img src="l_connect.png" border="0" alt="connect">','</a></acronym>',
+                    '<img src="l_connect.png" alt="connect" style="width: 15px">','</a></acronym>',
                     '<acronym title="Remove server from list">',
                     "<a href=\"amuleweb-servers.php?cmd=remove&amp;ip=", $srv->ip,"&amp;port=", $srv->port, "\" target=\"mainFrame\"
                     onclick=\"return confirm('Are you sure to remove this server from list?');\">",
-                    '<img src="l_remove.png" border="0" alt="cancel">','</a></acronym>',
+                    '<img src="l_remove.png" alt="cancel" style="width: 15px">','</a></acronym>',
                     '</td>';
                 }
               }
@@ -237,15 +237,13 @@
             ?>
         </table>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td colspan="2" class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td colspan="2" class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
   </table>
   </body>
 </html>
-
-

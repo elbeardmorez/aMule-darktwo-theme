@@ -4,10 +4,25 @@
 ## description
 an amuleweb theme for those who hate the light
 
+## installation
+-copy the contents of the repository to a folder name 'darktwo' (or anything else!)
+-either select this name under 'remote controls -> web template' in the desktop gui, or set the 'Template' key directly in the 'remote.conf' configuration file, e.g. sed -i 's/^\(Template\)=.*$/\1=darktwo/' (just make sure the web server isn't running when you do this to ensure the setting persists)
+-the optional patch 'amule.webserver.css.process.diff' by-passes the requirement of a login before any css be proccessed. applying this allows the login page elements to be styled consistently with rest of the pages. it's near pointless, as embedding the styles in the login page explicitly works around this issue, however, i wanted to know why it didn't work the way i wanted it to :)
+
 ## history
 clone of tchoumtux's 'amule_tchoum' (see http://sourceforge.net/projects/amule-tchoum/) 
 at v0.8 which pre-dates the SourceForge repository
 
+## features
+-WIP!
+-it looks pretty
+
+## notes
+-screenshots can be found in the repository's 'screenshots' directory
+-for changes, see file 'changelog' in repository
+-for a 'to do' list, see file 'todo' in repository
+
 ## thanks
 -'tchoumtux' for original project and thus the majority of code
 -'Pec' for the theme's main aMule logo
+

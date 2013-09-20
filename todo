@@ -1,0 +1,11 @@
+#todo
+-cherry pick and merge any changes from original project
+-fix annoying auto-refresh model
+-fix annoying refresh confirmation dialog due to POST (firefox)
+-fix logs iframe background colour
+-deprecate framelayout
+-replace more 'tables for layout' abuse with div layers where possible
+-sort out word-wrap for logs
+-recent search term cache
+-auto-refresh search until results exist
+-scrolling divs for stats and prefs pages

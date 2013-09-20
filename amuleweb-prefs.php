@@ -114,11 +114,11 @@
     </script>
   </head>
 
-  <body onload="init_data();">
+  <body class="prefs" onload="init_data();">
   <br>
-  <table border="0" align="center" cellspacing="0" cellpadding="0">
+  <table style="margin: auto;">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: preferences ::</b>
+      <td colspan="3"><p class="p-heading">:: preferences ::</p>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -128,12 +128,12 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td>
         <form name="mainform" action="amuleweb-prefs.php" method="post">
           <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
@@ -227,7 +227,7 @@
                     <td width="10%"><input name="udp_port" type="text" class="form_text" id="udp_port" size="5"></td>
                   </tr>
                   <tr>
-                    <td colspan="4"><input name="udp_dis" type="checkbox" id="udp_dis">Disab:le UDP connections</td>
+                    <td colspan="4"><input name="udp_dis" type="checkbox" id="udp_dis">Disable UDP connections</td>
                   </tr>
                 </table>
               </td>
@@ -301,12 +301,12 @@
           </table>
         </form>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
   </table>
   </body>

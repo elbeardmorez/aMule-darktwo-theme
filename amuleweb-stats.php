@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule Stats Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>aMule statistics</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
     <link rel="stylesheet" type="text/css" href="amuleweb.css" />
     <?php
       if ( $_SESSION["auto_refresh"] > 0 )
@@ -15,10 +15,9 @@
     ?>
   </head>
   <body>
-  <br>
-  <table border="0" align="center" cellspacing="0" cellpadding="0">
+  <table style="width: 400px; margin: auto;">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: statistics ::</b>
+      <td colspan="3"><p class="p-heading">:: statistics ::</p>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -28,47 +27,55 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td>
-        <table border="0" cellpadding="0" cellspacing="0" align="center">
+        <table>
           <tr valign="middle">
-            <td rowspan="5" align="center">
-              <iframe name="stats" src="amuleweb-stats_tree.php" width="380" height="470" frameborder="0"></iframe>
+            <td rowspan="4">
+              <iframe name="stats" src="amuleweb-stats_tree.php" style="width: 380px; height: 550px; padding: 5px; border-style: solid; border-width: 0px 1px 0px 0px; border-color: black;"></iframe>
             </td>
             <td>
-              <table align="left">
+              <table style="margin: 5px">
                 <tr>
-                  <td width="380" height="220" align="center"><img src="amule_stats_download.png" width="360" height="200" border="0" alt="stats_download"></td>
-                  <td width="380" height="220" align="center"><img src="amule_stats_upload.png" width="360" height="200" border="0" alt="stats_upload"></td>
+                  <td>
+                    <p style="font-weight: bold; margin: 5px;">download speed</p>
+                    <img src="amule_stats_download.png" alt="stats_download" style="width: 300px;">
+                  </td>
                 </tr>
-                <tr valign="top">
-                  <td align="center" height="30"><b>Download speed</b></td>
-                  <td align="center" height="30"><b>Upload speed</b></td>
+                <tr>
+                  <td>
+                    <p style="font-weight: bold; margin: 5px;">upload speed</p>
+                    <img src="amule_stats_upload.png" alt="stats_download" style="width: 300px;">
+                  </td>
                 </tr>
-                <tr valign="middle">
-                  <td width="380" height="220" align="center"><img src="amule_stats_conncount.png" width="360" height="200" border="0" alt="stats_conn"></td>
-                  <td width="380" height="220" align="center"><img src="amule_stats_kad.png" width="360" height="200" border="0" alt="stats_kad"></td>
+                <tr>
+                  <td>
+                    <p style="font-weight: bold; margin: 5px;"># ed2k connections</p>
+                    <img src="amule_stats_conncount.png" alt="stats_download" style="width: 300px;">
+                  </td>
                 </tr>
-                <tr valign="top">
-                  <td align="center"><b>Number of ed2k connections</b></td>
-                  <td align="center"><b>Number of Kad nodes connections</b></td>
+                <tr>
+                  <td>
+                    <p style="font-weight: bold; margin: 5px;"># Kad node connections</p>
+                    <img src="amule_stats_kad.png" alt="stats_download" style="width: 300px;">
+                  </td>
                 </tr>
               </table>
             </td>
           </tr>
         </table>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
   </table>
   </body>

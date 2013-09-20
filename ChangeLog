@@ -1,0 +1,14 @@
+2013Sep19 version 0a663f75011d367e68ba819363e402a42dd2b6e1
+ [mod] dark mod (Pete Beardmore)
+ -darken all colours
+ -add gradient borders to table layouts
+ -force dark on light for input colours
+ -harmonise login/welcome pages to improve transition aesthetics
+ -merge client/server log pages
+ -correct various element misalignments
+ -misc code clean ups
+ -update screenshots
+2013Sep19 version 5c7c3d375e1e2c246f6ef12190b9ae1cc77ed86d
+ initial commit (Pete Beardmore)
+ -import tchoumtux's 'amule_tchoum' theme v0.8
+ -white-space overhaul

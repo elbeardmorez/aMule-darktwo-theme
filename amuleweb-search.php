@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>aMule Search Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <link rel="stylesheet" type="text/css" href="amuleweb.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <link rel="stylesheet" type="text/css" href="amuleweb.css">
     <script language="JavaScript" type="text/JavaScript">
       function formCommandSubmit(command)
       {
@@ -22,9 +22,9 @@
   </head>
   <body>
   <br>
-  <table border="0" align="center" cellspacing="0" cellpadding="0">
+  <table style="width: 95%; margin: auto;">
     <tr>
-      <td height="30" colspan="3"><b>&nbsp;&nbsp;&nbsp;:: search ::</b>
+      <td colspan="3"><p class="p-heading">:: search ::</p>
         <?php
           if ($_SESSION["guest_login"] != 0)
           {
@@ -34,35 +34,36 @@
       </td>
     </tr>
     <tr>
-      <td class="tab_top_left">&nbsp;</td>
-      <td class="tab_top_middle">&nbsp;</td>
-      <td class="tab_top_right">&nbsp;</td>
+      <td class="tableborder tableborder-top-left"></td>
+      <td class="tableborder tableborder-top-middle"></td>
+      <td class="tableborder tableborder-top-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left"></td>
+    <tr class="layoutcolours">
+      <td class="tableborder tableborder-left"></td>
       <td>&nbsp;</td>
-      <td class="tab_right"></td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
-    <tr class="tab_colour">
-      <td class="tab_left">&nbsp;</td>
+    <tr class="layoutcolours">
+
+      <td class="tableborder tableborder-left"></td>
       <td>
         <form name="mainform" action="amuleweb-search.php" method="post">
-          <table cellpadding="0" cellspacing="0" align="center">
-            <tr valign="middle">
+          <table style="margin: auto;">
+            <tr style="vertical-align: middle">
               <td align="center">
-                <table cellpadding="5" cellspacing="5">
+                <table cellpadding="5" cellspacing="3">
                   <tr>
-                    <td colspan="3">
-                      <input name="searchval" id="searchval" type="text" class="form_text" size="70">
+                    <td style="padding: 0px 17px 0px 7px" colspan="3">
+                      <input name="searchval" id="searchval" type="text" class="form_text" style="width: 100%; margin: 0px">
                     </td>
                     <td align="center">
-                      <input name="search" id="search" type="submit" class="form_button" value="search" onClick="javascript:formCommandSubmit('search');">
+                      <input name="search" id="search" type="submit" class="form_button" value="search" onClick="javascript:formCommandSubmit('search');" style="width: 75px;">
                       <input type="hidden" name="command" value="">
                     </td>
                   </tr>
                   <tr>
                     <td align="center">
-                      <label>Min size :</label>
+                      <label>min size: </label>
                       <input name="minsize" id="minsize" type="text" class="form_text" size="5">
                       <select name="minsizeu" id="minsizeu" class="form_text">
                         <option>Byte</option>
@@ -72,20 +73,20 @@
                       </select>
                     </td>
                     <td align="center">
-                      <label>Availability >=</label>
+                      <label>availability [>=]: </label>
                       <input name="avail" id="avail" type="text" class="form_text" size="6">
                     </td>
                     <td align="center">
-                      <label>File extension :</label>
+                      <label>file extension: </label>
                       <input name="ext" id="ext" type="text" class="form_text" size="4">
                     </td>
                     <td align="center">
-                      <input name="reload" id="reload" type="button" class="form_button" value="reload Search" onClick="self.location.href='amuleweb-search.php'">
+                      <input name="reload" id="reload" type="button" class="form_button" value="reload search" onClick="self.location.href='amuleweb-search.php'" style="width: 75px;">
                     </td>
                   </tr>
                   <tr>
                     <td align="center">
-                      <label>Max size :</label>
+                      <label>max size: </label>
                       <input name="maxsize" id="maxsize" type="text" class="form_text" size="5">
                       <select name="maxsizeu" id="maxsizeu" class="form_text">
                         <option>Byte</option>
@@ -95,7 +96,7 @@
                       </select>
                     </td>
                     <td align="center">
-                      <label>Search type :</label>
+                      <label>search type: </label>
                       <select name="searchtype" id="searchtype" class="form_text">
                         <option value="2" selected>Kad</option>
                         <option value="1">Global</option>
@@ -103,7 +104,7 @@
                       </select>
                     </td>
                     <td align="center">
-                      <label>File type :</label>
+                      <label>file type: </label>
                       <select name="filetype" id="filetype" class="form_text">
                         <option selected></option>
                         <option value="Arc">Archive</option>
@@ -116,12 +117,12 @@
                       </select>
                     </td>
                     <td align="center">
-                      <input name="clear" id="clear_fields" type="reset" class="form_button" value="clear search" onClick="javascript:formCommandSubmit('clear');">
+                      <input name="clear" id="clear_fields" type="reset" class="form_button" value="clear search" onClick="javascript:formCommandSubmit('clear');" style="width: 75px;">
                     </td>
                   </tr>
                 </table>
               </td>
-              <td align="center" width="200">
+              <td style="padding-left: 30px">
                 <table>
                   <tr>
                     <td>
@@ -146,16 +147,17 @@
               </td>
             </tr>
           </table>
-          <table align="center" rules="rows" border="0" cellspacing="0" cellpadding="0">
+          &nbsp;&nbsp;
+          <table class="tablelayout table-row-border">
             <tr>
-              <td height="30" width="20">&nbsp;</td>
-              <td height="30"><a href="amuleweb-search.php?sort=name" target="mainFrame">Filename</a></td>
-              <td height="30" align="center"><a href="amuleweb-search.php?sort=size" target="mainFrame">Size</a></td>
-              <td height="30" align="center"><a href="amuleweb-search.php?sort=sources" target="mainFrame">Sources</a></td>
+              <td style="height: 30px; width: 20px;">&nbsp;</td>
+              <td style="height: 30px; text-align: left;"><a href="amuleweb-search.php?sort=name" target="mainFrame" >filename</a></td>
+              <td style="height: 30px; text-align: center;"><a href="amuleweb-search.php?sort=size" target="mainFrame">size</a></td>
+              <td style="height: 30px; text-align: center;"><a href="amuleweb-search.php?sort=sources" target="mainFrame">sources</a></td>
               <?php
                 if ($_SESSION["guest_login"] == 0)
                 {
-                  echo '<td height="30" align="center"><b>Actions</b></td>';
+                  echo '<td style=\"height: 30px; text-align: center; font-weight: bold;\">actions</td>';
                 }
               ?>
             </tr>
@@ -306,13 +308,13 @@
             foreach ($search as $file)
             {
               echo '<tr id="list_view">';
-              echo '<td height="30"><input type="checkbox" name="', $file->hash, '"></td>';
-              echo '<td height="30">', $file->name, '</td>';
-              echo '<td height="30" align="center">', CastToXBytes($file->size), '</td>';
-              echo '<td height="30" align="center">', $file->sources, '</td>';
+              echo '<td style="height: 30px;"><input type="checkbox" name="', $file->hash, '"></td>';
+              echo '<td style="height: 30px; white-space: normal; text-align: left;">', $file->name, '</td>';
+              echo '<td style="height: 30px; text-align: center;">', CastToXBytes($file->size), '</td>';
+              echo '<td style="height: 30px; text-align: center;">', $file->sources, '</td>';
               if ($_SESSION["guest_login"] == 0)
               {
-                echo "<td height=\"30\" align=\"center\"><acronym title=\"Download File\"><a href=\"amuleweb-search.php?command=download_single&targetcat=all&name=", $file->hash, "\"><img src=\"l_ed2klink.png\" border=\"0\" alt=\"Download File\"></a></acronym></td>";
+                echo "<td style=\"height: 30px; text-align: center;\"><acronym title=\"Download File\"><a href=\"amuleweb-search.php?command=download_single&targetcat=all&name=", $file->hash, "\"><img src=\"l_ed2klink.png\" style=\"display: inline;\" alt=\"Download File\"></a></acronym></td>";
               }
               echo '</tr>';
             }
@@ -320,12 +322,12 @@
           </table>
         </form>
       </td>
-      <td class="tab_right">&nbsp;</td>
+      <td class="tableborder tableborder-right"></td>
     </tr>
     <tr>
-      <td class="tab_bottom_left">&nbsp;</td>
-      <td class="tab_bottom_middle">&nbsp;</td>
-      <td class="tab_bottom_right">&nbsp;</td>
+      <td class="tableborder tableborder-bottom-left"></td>
+      <td class="tableborder tableborder-bottom-middle"></td>
+      <td class="tableborder tableborder-bottom-right"></td>
     </tr>
   </table>
   </body>

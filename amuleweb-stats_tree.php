@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule Stats Tree Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>aMule statistics (tree)</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
     <link rel="stylesheet" type="text/css" href="amuleweb.css" />
     <script language="JavaScript" type="text/JavaScript">
       var openImg = new Image();
@@ -31,7 +31,7 @@
     </script>
   </head>
 
-  <body onLoad="showBranch('br_Stats');swapFolder('fl_Stats')" class="tab_colour">
+  <body onLoad="showBranch('br_Stats');swapFolder('fl_Stats')" class="layoutcolours">
     <?php
 
     function print_ident($i)

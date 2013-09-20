@@ -2,22 +2,29 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>aMule Control Connection Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <link rel="stylesheet" type="text/css" href="amuleweb.css" />
+    <title>aMule info toolbar</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <link rel="stylesheet" type="text/css" href="amuleweb.css" \>
     <?php
       if ( $_SESSION["auto_refresh"] > 0 ) {
         echo "<meta http-equiv=\"refresh\" content=\"", $_SESSION["auto_refresh"], '">';
       }
     ?>
+    <script language="JavaScript" type="text/JavaScript">
+      function refresh()
+      {
+        parent.mainFrame.document.location = "amuleweb-transfers.php";
+      }
+    </script>
   </head>
   <body background="main_topbar.png">
-    <table width="100%">
-      <tr valign="middle">
-        <td align="center" width="10">
-          <img src="emule.png" height="30">
+    <div id="infobar">
+    <table style="height: 100%;">
+      <tr style="height: 100%; vertical-align: middle">
+        <td style="width: 20px; margin: auto 5px; text-align: center;">
+          <img src="emule.png" style="height: 30px;">
         </td>
-        <td nowrap height="85" valign="middle">
+        <td style="padding: 0px 5px; margin: 0px 10px;">
           <?php
             function CastToXBytes($size)
             {
@@ -67,6 +74,36 @@
               '<small> (Limits : ', CastToXBytes($stats["speed_limit_up"]), '/s | ',
               CastToXBytes($stats["speed_limit_down"]), '/s)</small>&nbsp;';
           ?>
+        </td>
+        <td style="width: 100%; text-align: right; padding: 0px 5px; margin: 0px 10px 0px 20px">
+          <form name="formlink" method="get" action="amuleweb-infobar.php">
+            <input name="Submit" type="submit" class="form_button" value="download link" onclick="refresh()">
+            <input id="ed2klink" name="ed2klink" type="text" class="form_text" style="width:50%; max-width: 450px; min-width: 10px; padding: 2px 5px 2px 2px">
+            <select id="selectcat" name="selectcat" class="form_text">
+              <?php
+                $cats = amule_get_categories();
+                if ( $HTTP_GET_VARS["Submit"] != "" )
+                {
+                  $link = $HTTP_GET_VARS["ed2klink"];
+                  $target_cat = $HTTP_GET_VARS["selectcat"];
+                  $target_cat_idx = 0;
+                        foreach($cats as $i => $c)
+                        {
+                          if ( $target_cat == $c) $target_cat_idx = $i;
+                        }
+
+                        if ( strlen($link) > 0 )
+                        {
+                          amule_do_ed2k_download_cmd($link, $target_cat_idx);
+                        }
+                }
+                foreach($cats as $c)
+                {
+                  echo  '<option>', $c, '</option>';
+                }
+              ?>
+            </select>
+          </form>
         </td>
       </tr>
     </table>
